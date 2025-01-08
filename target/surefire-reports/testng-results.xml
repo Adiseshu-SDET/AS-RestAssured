@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-07T17:20:24 GMT-06:00" name="Command line suite" finished-at="2025-01-07T17:20:29 GMT-06:00" duration-ms="4472">
+    <groups>
+      <group name="Regression">
+        <method signature="ResponseValidationTest.testPostRequestValidation()[pri:0, instance:tests.ResponseValidationTest@4de5031f]" name="testPostRequestValidation" class="tests.ResponseValidationTest"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="ResponseValidationTest.testGetUserValidation()[pri:0, instance:tests.ResponseValidationTest@4de5031f]" name="testGetUserValidation" class="tests.ResponseValidationTest"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2025-01-07T17:20:24 GMT-06:00" name="Command line test" finished-at="2025-01-07T17:20:29 GMT-06:00" duration-ms="4472">
+      <class name="tests.DynamicRequestTest">
+        <test-method signature="testGetUsersWithHeadersAndParams()[pri:0, instance:tests.DynamicRequestTest@429bd883]" started-at="2025-01-07T17:20:24 GMT-06:00" name="testGetUsersWithHeadersAndParams" finished-at="2025-01-07T17:20:27 GMT-06:00" duration-ms="2514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsersWithHeadersAndParams -->
+        <test-method signature="testPostRequest()[pri:0, instance:tests.DynamicRequestTest@429bd883]" started-at="2025-01-07T17:20:27 GMT-06:00" name="testPostRequest" finished-at="2025-01-07T17:20:28 GMT-06:00" duration-ms="1119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostRequest -->
+      </class> <!-- tests.DynamicRequestTest -->
+      <class name="tests.ResponseValidationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.ResponseValidationTest@4de5031f]" started-at="2025-01-07T17:20:28 GMT-06:00" name="setup" finished-at="2025-01-07T17:20:28 GMT-06:00" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetUserValidation()[pri:0, instance:tests.ResponseValidationTest@4de5031f]" started-at="2025-01-07T17:20:28 GMT-06:00" name="testGetUserValidation" finished-at="2025-01-07T17:20:28 GMT-06:00" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserValidation -->
+        <test-method signature="testPostRequestValidation()[pri:0, instance:tests.ResponseValidationTest@4de5031f]" started-at="2025-01-07T17:20:28 GMT-06:00" name="testPostRequestValidation" finished-at="2025-01-07T17:20:29 GMT-06:00" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostRequestValidation -->
+      </class> <!-- tests.ResponseValidationTest -->
+      <class name="com.api.automation.restassured_framework.AppTest">
+        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:com.api.automation.restassured_framework.AppTest@525b461a]" started-at="2025-01-07T17:20:24 GMT-06:00" name="shouldAnswerWithTrue" finished-at="2025-01-07T17:20:24 GMT-06:00" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- com.api.automation.restassured_framework.AppTest -->
+      <class name="tests.GetUsersTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.GetUsersTest@52aa2946]" started-at="2025-01-07T17:20:28 GMT-06:00" name="setup" finished-at="2025-01-07T17:20:28 GMT-06:00" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyGetUsers()[pri:0, instance:tests.GetUsersTest@52aa2946]" started-at="2025-01-07T17:20:28 GMT-06:00" name="verifyGetUsers" finished-at="2025-01-07T17:20:28 GMT-06:00" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetUsers -->
+        <test-method is-config="true" signature="tearDownExtentReport()[pri:0, instance:tests.GetUsersTest@52aa2946]" started-at="2025-01-07T17:20:29 GMT-06:00" name="tearDownExtentReport" finished-at="2025-01-07T17:20:29 GMT-06:00" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownExtentReport -->
+      </class> <!-- tests.GetUsersTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-07T23:50:57 GMT-06:00" name="Default suite" finished-at="2025-01-07T23:51:01 GMT-06:00" duration-ms="4223">
+    <groups>
+    </groups>
+    <test started-at="2025-01-07T23:50:57 GMT-06:00" name="Default test" finished-at="2025-01-07T23:51:01 GMT-06:00" duration-ms="4223">
+      <class name="tests.CreateUserTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CreateUserTest@5c6648b0]" started-at="2025-01-07T23:50:57 GMT-06:00" name="setup" finished-at="2025-01-07T23:50:57 GMT-06:00" duration-ms="601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validateCreateUserFromExcel(java.util.Map)[pri:0, instance:tests.CreateUserTest@5c6648b0]" started-at="2025-01-07T23:50:58 GMT-06:00" name="validateCreateUserFromExcel" data-provider="userDataFromExcel" finished-at="2025-01-07T23:51:00 GMT-06:00" duration-ms="2101" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=John, Email=john.doe@example.com, Address=1234 Main St}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateUserFromExcel -->
+        <test-method signature="validateCreateUserFromExcel(java.util.Map)[pri:0, instance:tests.CreateUserTest@5c6648b0]" started-at="2025-01-07T23:51:00 GMT-06:00" name="validateCreateUserFromExcel" data-provider="userDataFromExcel" finished-at="2025-01-07T23:51:01 GMT-06:00" duration-ms="355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Jane, Email=jane.smith@example.com, Address=5678 Elm St}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateUserFromExcel -->
+        <test-method signature="validateCreateUserFromExcel(java.util.Map)[pri:0, instance:tests.CreateUserTest@5c6648b0]" started-at="2025-01-07T23:51:01 GMT-06:00" name="validateCreateUserFromExcel" data-provider="userDataFromExcel" finished-at="2025-01-07T23:51:01 GMT-06:00" duration-ms="273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Alice, Email=alice.johnson@example.com, Address=9102 Oak St}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateUserFromExcel -->
+        <test-method is-config="true" signature="tearDownExtentReport()[pri:0, instance:tests.CreateUserTest@5c6648b0]" started-at="2025-01-07T23:51:01 GMT-06:00" name="tearDownExtentReport" finished-at="2025-01-07T23:51:01 GMT-06:00" duration-ms="421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownExtentReport -->
+      </class> <!-- tests.CreateUserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

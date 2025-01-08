@@ -1,0 +1,5 @@
+com\api\automation\restassured_framework\AppTest.class
+tests\ResponseValidationTest.class
+tests\ConfigTest.class
+tests\DynamicRequestTest.class
+tests\GetUsersTest.class
