@@ -14,7 +14,7 @@ Java: JDK 11 or later
 Maven: 3.6 or later
 Git
 IDE: Eclipse or IntelliJ IDEA
-Jenkins (for CI/CD pipeline)
+Jenkins: For CI/CD pipeline
 Project Structure
 bash
 Copy code
@@ -31,43 +31,72 @@ restassured-framework/
 ├── pom.xml                          # Maven configuration file
 └── testng.xml                       # TestNG suite file
 Setup Instructions
-Clone the Repository
+1. Clone the Repository
+To get started, clone the repository using the following command:
+
 bash
 Copy code
 git clone https://github.com/your-username/restassured-framework.git
 cd restassured-framework
-Configure the Project
-Update the src/test/resources/config.properties file with the appropriate API base URL and timeout settings.
+2. Configure the Project
+Update the src/test/resources/config.properties file with the appropriate API base URL and timeout settings. Example:
 
-Run Tests Locally
-To run all tests using Maven:
+properties
+Copy code
+base.url=https://jsonplaceholder.typicode.com
+timeout=5000
+environment=QA
+3. Run Tests Locally
+You can run all tests locally using Maven. Use the following command:
 
 bash
 Copy code
 mvn clean test -DsuiteXmlFile=src/test/resources/testng.xml
-Generate Reports
-After running the tests, the Extent Report can be found at:
+This will execute all tests specified in the testng.xml file.
+
+4. Generate Reports
+After running the tests, the Extent Report will be generated at:
 
 bash
 Copy code
 test-output/extent-report.html
+Open this file in a browser to view the detailed test execution report.
+
 CI/CD Pipeline
-The project is designed to integrate with Jenkins for automated test execution.
+The project is designed to integrate with Jenkins for continuous integration and continuous delivery (CI/CD). Follow the steps below to set up the Jenkins job:
 
-Parameters:
+1. Create a Jenkins Job
+Go to your Jenkins dashboard and create a new Freestyle project.
 
-suiteXmlFile: Path to the TestNG suite XML file.
-Maven Command:
+Under Source Code Management, select Git and provide the repository URL.
+
+In the Build section, add a build step to invoke Maven with the following command:
 
 bash
 Copy code
-clean test -DsuiteXmlFile=${suiteXmlFile}
-Post-build Actions:
+clean test -DsuiteXmlFile=src/test/resources/testng.xml
+2. Configure Build Parameters
+To avoid hardcoding values, add a parameterized build option in Jenkins:
 
-Publish JUnit test results: target/surefire-reports/*.xml.
-Publish Extent Reports: test-output/extent-report.html.
+Add a String Parameter named suiteXmlFile with the default value:
+bash
+Copy code
+src/test/resources/testng.xml
+3. Post-Build Actions
+Add a post-build action to publish JUnit test results:
+bash
+Copy code
+target/surefire-reports/*.xml
+Add another post-build action to publish the HTML report:
+HTML directory to archive: test-output
+Index page[s]: extent-report.html
+Report title: Extent Report
 Contributing
-Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request for review.
+Contributions are welcome! To contribute:
 
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Commit your changes and push the branch.
+Submit a pull request for review.
 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for more details.
