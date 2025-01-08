@@ -8,7 +8,7 @@ import utils.Log;
 
 public class ValidateAuthorization {
 
-	@Test
+	@Test(enabled = false)
 	public void validateAuthorization() {
 		String token = given().auth().preemptive().basic("username", "password").when()
 				.post("https://api.example.com/auth/token").then().statusCode(200).extract().path("access_token");

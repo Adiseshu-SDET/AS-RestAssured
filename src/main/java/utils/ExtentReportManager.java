@@ -5,21 +5,16 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import java.io.File;
-
 public class ExtentReportManager {
 
     private static ExtentReports extent;
     private static ExtentSparkReporter sparkReporter;
+    private static int testCounter = 0;  // Counter to track the number of tests executed
 
     // Method to initialize Extent Reports
     public static ExtentReports getInstance() {
         if (extent == null) {
             String reportPath = System.getProperty("user.dir") + "/test-output/extent-report.html";
-
-            // Check if the report already exists to enable append mode
-            boolean appendMode = new File(reportPath).exists();
-
             sparkReporter = new ExtentSparkReporter(reportPath);
             sparkReporter.config().setTheme(Theme.STANDARD);
             sparkReporter.config().setDocumentTitle("API Automation Report");
@@ -27,10 +22,6 @@ public class ExtentReportManager {
 
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
-
-            if (appendMode) {
-                extent.setReportUsesManualConfiguration(true);
-            }
 
             // Add environment details
             extent.setSystemInfo("Operating System", System.getProperty("os.name"));
@@ -43,6 +34,11 @@ public class ExtentReportManager {
     }
 
     public static ExtentTest createTest(String testName, String description) {
+        testCounter++;  // Increment counter whenever a new test is created
         return getInstance().createTest(testName, description);
+    }
+
+    public static int getTestCounter() {
+        return testCounter;
     }
 }

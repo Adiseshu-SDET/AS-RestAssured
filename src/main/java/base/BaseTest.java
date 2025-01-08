@@ -33,6 +33,11 @@ public class BaseTest {
     
     @AfterSuite
     public void tearDownExtentReport() {
-        ExtentReportManager.getInstance().flush();
+        if (ExtentReportManager.getInstance() != null && ExtentReportManager.getTestCounter() > 0) {
+            ExtentReportManager.getInstance().flush();
+            System.out.println("Extent Report flushed successfully.");
+        } else {
+            System.out.println("No tests were executed. Skipping Extent Report flush.");
+        }
     }
 }

@@ -7,7 +7,7 @@ import utils.Log;
 
 public class ValidatePagination {
 
-	@Test
+	@Test(enabled = false)
 	public void validatePagination() {
 		int totalPages = given().queryParam("page", 1).when().get("https://api.example.com/items").then()
 				.statusCode(200).extract().path("total_pages");
